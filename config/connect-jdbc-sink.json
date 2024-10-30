@@ -1,0 +1,19 @@
+{
+    "name": "jdbc-sink-connector",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "connection.url": "jdbc:postgresql://db:5432/totebets",
+      "connection.user": "postgres",
+      "connection.password": "example",
+      "connection.loginTimeout": "10",
+      "topics": "tote_win_bet_race_runners_odds,tote_win_bets",
+      "table.name.format": "${topic}",
+      "insert.mode": "insert",
+      "auto.create": true,
+      "auto.evolve": true,
+      "value.converter.schema.registry.url": "http://schema-registry:8081",
+      "value.converter.schemas.enable": "false",
+      "rest.advertised.host.name": "connect"       
+    }
+  }
+   
