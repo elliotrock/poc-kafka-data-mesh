@@ -19,7 +19,7 @@ build:
 
 .PHONY: start
 start: 
-	docker compose up
+	docker compose -f docker-compose-cell-1.yml -f docker-compose-data-platform.yml up
 
 .PHONY: stop
 stop: 

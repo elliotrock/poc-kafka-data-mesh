@@ -46,5 +46,5 @@ CREATE STREAM tote_win_bet_race_runners_odds WITH (kafka_topic='tote_win_bet_rac
     INNER JOIN tote_race_pool ON tote_win_bets.race_id = tote_race_pool.race_id
     EMIT CHANGES;  
   
-CREATE STREAM tote_win_bet_odds_json WITH (kafka_topic='tote_win_bet_odds_json',  partitions=1, value_format = 'json')
-    AS SELECT * FROM tote_win_bet_race_runners_odds;
+-- CREATE STREAM tote_win_bet_odds_json WITH (kafka_topic='tote_win_bet_odds_json',  partitions=1, value_format = 'json')
+--    AS SELECT * FROM tote_win_bet_race_runners_odds;
